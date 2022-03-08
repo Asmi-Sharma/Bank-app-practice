@@ -42,14 +42,9 @@
             let response = await this.$auth.loginWith('local', {
               data: logininfo
             })
-            // let profileData = {
-            //   'email': response.data.iam.email,
-            //   'uname' : response.data.iam.name,
-          
-            // }
             let email = response.data.iam.email
             this.$store.commit('STORE_EMAIL', email);
-            this.$router.push({ name: 'Dashboard', params: { email: email }})
+            this.$router.push('/Dashboard')
           }catch(error){
             console.log('error occured',error)
           }
@@ -64,13 +59,11 @@
     padding-right: 3em;
     padding-left: 3em;
     padding-bottom: 2em;
-    /* height: 70%; */
     max-width: 70%;
     width: 70%;
 }
 .login{
   width: 100%;
-  /* height: 100%; */
 }
 
 </style>

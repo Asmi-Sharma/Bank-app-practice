@@ -46,7 +46,6 @@
         </div>
       </div>
       <div>
-          <!-- {{ $route.params.email }} -->
           <table class="table mt-5">
               <tr>
                   <th>Date</th>
